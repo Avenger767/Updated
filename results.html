@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Results</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .score {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0077cc;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .summary {
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/afg-logo.png" alt="AFG Logo" class="logo">
+    <h1>Quiz Results</h1>
+    <div class="score" id="score"></div>
+    <div class="summary" id="summary"></div>
+    <button onclick="window.location.href='index.html'">Return to Start</button>
+  </div>
+  <script>
+    const username = localStorage.getItem('quizUser') || 'Anonymous';
+    const score = localStorage.getItem('lastScore') || 'N/A';
+    const total = localStorage.getItem('lastTotal') || 'N/A';
+    document.getElementById('score').innerText = `Score: ${score} / ${total}`;
+    document.getElementById('summary').innerText = `Thank you, ${username}, for completing the quiz.`;
+  </script>
+</body>
+</html>
