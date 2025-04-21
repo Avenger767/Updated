@@ -2,30 +2,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test Results</title>
+  <title>Quiz Results</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .score {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
       color: #0077cc;
       margin-top: 20px;
       text-align: center;
     }
     .summary {
-      font-size: 16px;
-      margin-top: 10px;
+      font-size: 18px;
+      margin-top: 15px;
       text-align: center;
+      color: #444;
+    }
+    .complete {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #666;
+    }
+    .btns {
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="assets/afg-logo.png" alt="AFG Logo" class="logo">
-    <h1>Quiz Results</h1>
+    <h1>Training Quiz Completed</h1>
     <div class="score" id="score"></div>
     <div class="summary" id="summary"></div>
-    <button onclick="window.location.href='index.html'">Return to Start</button>
+    <div class="complete">Your answers have been saved. Great work!</div>
+    <div class="btns">
+      <button onclick="window.location.href='index.html'">Return to Start</button>
+      <button onclick="window.location.href='admin.html'">Go to Admin Dashboard</button>
+    </div>
   </div>
   <script>
     const username = localStorage.getItem('quizUser') || 'Anonymous';
